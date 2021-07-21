@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@model ButtonInfo
+<div class="container">
+    <form action ="createForm" method="post">
+        <div class="row">
+            <div class="col">
+                <label for="FirtName">FirstName</label>
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+                <input asp-for="FirstName" class="form-control">
+                <label for="LastName">LastName</label>
+                <span asp-validation-for="LastName" class="text-danger"></span>
+                <input asp-for="LastName" class="form-control">
+                <label for="Address">Address</label>
+                <span asp-validation-for="Address" class="text-danger"></span>
+                <input asp-for="Address" class="form-control">
+                <label for="State">State</label>
+                <span asp-validation-for="State" class="text-danger"></span>
+                <select asp-for="State" class="form-control">
+                    <option disabled selected>--Select a State--</option>
+                    <option value="Texas">Texas</option>
+                    <option value="California">California</option>
+                    <option value="NY">NY</option>
+                    <option value="Colorado">Colorado</option>
+                </select>
+                <label for="Country">Country</label>
+                <span asp-validation-for="Country" class="text-danger"></span>
+                <input asp-for="Country" class="form-control">
+            </div>
+        </div>
+        <input type="Submit" value="Button" class="btn btn-primary"/>
+    </form>
+    <hr>
+   
+</div>
+
